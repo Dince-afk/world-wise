@@ -1,6 +1,7 @@
 import styles from "./Homepage.module.css";
 import Button from "../components/Button";
 import PageNav from "../components/PageNav";
+import { NavLink } from "react-router-dom";
 
 export default function Homepage() {
   return (
@@ -17,7 +18,9 @@ export default function Homepage() {
           of. Never forget your wonderful experiences, and show your friends how
           you have wandered the world.
         </h2>
-        <Button type={"primary"}>Start exploring</Button>
+        <NavLink to="login">
+          <Button type={"primary"}>Start exploring</Button>
+        </NavLink>
       </section>
     </main>
   );
