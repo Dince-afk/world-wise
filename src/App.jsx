@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { inject } from "@vercel/analytics";
 
 import Spinner from "./components/Spinner";
 import Homepage from "./pages/Homepage";
@@ -8,6 +9,8 @@ import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./pages/AppLayout";
 import City from "./components/City";
+
+inject();
 
 function App() {
   return (
