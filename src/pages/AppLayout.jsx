@@ -1,5 +1,5 @@
-import Sidebar from "../components/Sidebar";
 import styles from "./AppLayout.module.css";
+import Sidebar from "../components/Sidebar";
 
 function AppLayout() {
   return (
