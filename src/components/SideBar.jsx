@@ -1,13 +1,15 @@
+import { Outlet } from "react-router-dom";
+
 import styles from "./Sidebar.module.css";
 import AppNav from "./AppNav";
 import Logo from "./Logo";
 
-function SideBar() {
+function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
-
+      <Outlet />
       <footer className={styles.copyright}>
         © Copyright 2024 by WorldWise Inc.
       </footer>
@@ -15,4 +17,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default Sidebar;
