@@ -2,10 +2,15 @@ import styles from "./Homepage.module.css";
 import Button from "../components/Button";
 import PageNav from "../components/PageNav";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Homepage() {
+  useEffect(() => {
+    fetch("http://localhost:3000/api/hello").catch((res) => console.log(res));
+  }, []);
+
   return (
-    <main className={styles.homepage}>
+    <main className={`${styles.homepage} bg-slate-300`}>
       <PageNav />
       <section>
         <h1>
