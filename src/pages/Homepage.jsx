@@ -5,10 +5,6 @@ import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Homepage() {
-  useEffect(() => {
-    fetch("http://localhost:3000/api/hello").catch((res) => console.log(res));
-  }, []);
-
   return (
     <main className={`${styles.homepage} bg-slate-300`}>
       <PageNav />
