@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const CitiesContext = createContext();
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "http://localhost:3000";
 
 function CitiesProvider({ children }) {
   const [cities, setCities] = useState([]);
@@ -39,9 +39,7 @@ function CitiesProvider({ children }) {
   }
 
   return (
-    <CitiesContext.Provider
-      value={{ cities, isLoading, getCity, isLoading, currentCity }}
-    >
+    <CitiesContext.Provider value={{ cities, isLoading, getCity, currentCity }}>
       {children}
     </CitiesContext.Provider>
   );
